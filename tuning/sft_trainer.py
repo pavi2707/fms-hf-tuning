@@ -127,7 +127,6 @@ def train(
         model_args.model_name_or_path,
         cache_dir=train_args.cache_dir,
         torch_dtype=get_torch_dtype(model_args.torch_dtype),
-        use_flash_attention_2=model_args.use_flash_attn,
     )
 
     peft_config = get_hf_peft_config(task_type, peft_config)
